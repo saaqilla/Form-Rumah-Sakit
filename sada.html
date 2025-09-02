@@ -1,0 +1,167 @@
+<!DOCTYPE html> <!-- Mendefinisikan tipe dokumen HTML5 --> 
+<html lang="id"> <!-- Elemen utama halaman, dengan bahasa Indonesia --> 
+  
+<head> 
+  <meta charset="UTF-8"> <!-- Set karakter encoding ke UTF-8 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsif untuk perangkat mobile --> 
+  <title>Rumah Sakit</title> <!-- Judul tab browser --> 
+ 
+  <!-- Fonts --> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Import font Poppins --> 
+ 
+  <!-- Feather Icons --> 
+  <script src="https://unpkg.com/feather-icons"></script> <!-- Library ikon Feather --> 
+ 
+  <link rel="stylesheet" href="dia 1.css"> <!--Link ke file CSS eksternal--> 
+  <style> 
+    #gatau { 
+  max-width: 600px;                 /* Lebar maksimum hasil */ 
+  margin: 30px auto;                /* Tengah dan jarak dari atas */ 
+  background-color: #ffffff;        /* Latar putih */ 
+  border-left: 6px solid #6c63ff;   /* Garis warna di kiri */ 
+  padding: 20px 30px;               /* Padding dalam */ 
+  border-radius: 8px;               /* Sudut membulat */ 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Bayangan halus */ 
+  color: #333;                      /* Warna teks */ 
+} 
+ 
+#gatau h2 { 
+  margin-top: 0;                    /* Hilangkan margin atas */ 
+  color: #6c63ff;                   /* Warna judul biru */ 
+  font-size: 20px;                  /* Ukuran judul */ 
+  border-bottom: 1px solid #eee;    /* Garis bawah abu muda */ 
+  padding-bottom: 10px;             /* Jarak ke bawah */ 
+} 
+ 
+#gatau p { 
+  margin: 8px 0;                    /* Jarak atas dan bawah */ 
+  line-height: 1.5;                 /* Jarak antar baris */ 
+} 
+ 
+  </style> 
+</head> 
+ 
+<body> 
+ 
+  <!-- ==================== Navbar ==================== --> 
+  <nav class="navbar"> <!-- Navbar utama --> 
+    <a href="#" class="navbar-logo">Rumah Sakit</a> <!-- Logo atau nama merek --> 
+ 
+    <div class="navbar-nav"> <!-- Navigasi halaman --> 
+      <a href="Home.html">Home</a> <!-- Link ke halaman Home --> 
+      <a href="Tentang Kami.html">Tentang Kami</a> <!-- Link ke halaman Tentang Kami --> 
+      <a class="tombol" href="Layanan.html">Layanan</a> <!-- Link ke halaman Layanan --> 
+      <a href="Kontak.html">Kontak</a> <!-- Link ke halaman Kontak --> 
+      <a href="Raisya.html">Biodata</a> <!-- Link ke halaman Biodata --> 
+    </div> 
+  </nav> 
+ 
+  <!-- ==================== Formulir ==================== --> 
+    <div class="Formulir"> <!-- Container formulir --> 
+    <h1 style="text-transform: uppercase; text-align:center;"> 
+      Formulir Pendaftaran Pasien <!-- Judul utama formulir --> 
+    </h1>
+
+    <script>
+      var yakin = confirm("Kamu yakin tetap ingin buka form ini?");
+      if (yakin) {
+        alert('Silakan membuat form sendiri');
+      } else {
+        window.location = "https://www.detik.com";
+      }
+    </script>
+
+    <!-- Form input -->
+    <form id="FormSaya">
+      <script>
+        var nama = prompt("Masukkan Nama Lengkap:", "Contoh (Nama Lengkap : Aqiilah Salma)");
+        document.write("<p><b>Nama</b></p>");
+      </script>
+      <input type="text" id="nama" required><br><br>
+      <script>
+        var umur = prompt("Masukkan Umur:", "Contoh (20)");
+        document.write("<p><b>Umur</b></p>");
+      </script>
+      <input type="text" id="umur" required><br><br>
+      <script>
+    var gender = prompt("Masukkan Jenis Kelamin:", "Contoh (Laki-laki / Perempuan)");
+    document.write("<p><b>Jenis Kelamin</b></p>");
+</script>
+  <select id="gender" required>
+    <option value="">-- Pilih Jenis Kelamin --</option>
+    <option value="Laki-laki">Laki-laki</option>
+    <option value="Perempuan">Perempuan</option>
+  </select><br><br>
+      <script>
+        var alamat = prompt("Masukkan Alamat:", "Contoh (Jl. Gamon No.10)");
+        document.write("<p><b>Alamat</b></p>");
+      </script>
+      <input type="text" id="alamat" required><br><br>
+      <script>
+        var telepon = prompt("Masukkan No. Telepon:", "Contoh (08123456789)");
+        document.write("<p><b>No. Telepon</b></p>");
+      </script>
+      <input type="text" id="telepon" required><br><br>
+      <script>
+        var keluhan = prompt("Masukkan Keluhan:", "Contoh (Sakit kepala)");
+        document.write("<p><b>Keluhan</b></p>");
+      </script>
+      <input type="text" id="keluhan" required><br><br>
+      <script>
+        var email = prompt("Masukkan Email:", "Contoh (aqiilah@email.com)");
+        document.write("<p><b>Email</b></p>");
+      </script>
+      <input type="text" id="email" required><br><br>
+      <script>
+    var golDarah = prompt("Masukkan Golongan Darah:", "Contoh (A, B, AB, O)");
+    document.write("<p><b>Golongan Darah</b></p>");
+  </script>
+  <select id="golDarah" required>
+    <option value="">-- Pilih Golongan Darah --</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="AB">AB</option>
+    <option value="O">O</option>
+  </select><br><br>
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <!-- ==================== Hasil Output ==================== -->
+  <div id="gatau" style="display:none;"></div>
+
+  <!-- ==================== Script JavaScript ==================== -->
+  <script>
+    const form = document.getElementById("FormSaya");
+    const hasil = document.getElementById("gatau");
+
+    form.addEventListener("submit", function(dahtau) {
+      dahtau.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const umur = document.getElementById("umur").value;
+      const gender = document.getElementById("gender").value;
+      const alamat = document.getElementById("alamat").value;
+      const telepon = document.getElementById("telepon").value;
+      const keluhan = document.getElementById("keluhan").value;
+      const email = document.getElementById("email").value;
+      const golDarah = document.getElementById("golDarah").value;
+
+      hasil.style.display = "block";
+      hasil.innerHTML = `
+        <h2>DATA PRIBADI</h2>
+        <p><b>Nama:</b> ${nama}</p>
+        <p><b>Umur:</b> ${umur} Tahun</p>
+        <p><b>Jenis Kelamin:</b> ${gender}</p>
+        <p><b>Alamat:</b> ${alamat}</p>
+        <p><b>No. Telepon:</b> ${telepon}</p>
+        <p><b>Keluhan:</b> ${keluhan}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Gol Darah:</b> ${golDarah}</p>
+
+      `;
+    });
+  </script>
+
+</body>
+</html>
